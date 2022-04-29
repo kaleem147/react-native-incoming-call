@@ -1,77 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/background"
+    android:background="#eef1f5"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:gravity="center_horizontal"
-    >
-
-        <RelativeLayout
-            android:layout_width="170dp"
-            android:layout_height="170dp"
+        android:background="#ff9e15"
+        android:paddingVertical="30dp"
         >
-            <ImageView
-                android:id="@+id/ivAvatar"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:scaleType="fitXY"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/ic_avatar_default"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-            />
-
-            <ImageView
-                android:id="@+id/ivRing1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:scaleType="fitXY"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_ring"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-            />
-
-            <ImageView
-                android:id="@+id/ivRing2"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_ring"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-            />
-        </RelativeLayout>
-
         <TextView
-            android:id="@+id/tvName"
+            android:layout_marginBottom="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="22sp"
             android:fontFamily="sans-serif"
             android:textColor="#FFFFFF"
-        />
+            android:text="oladoc video consultation"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_call_patient"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif"
+            android:textColor="#FFFFFF"
+            />
 
         <TextView
             android:id="@+id/tvInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:textSize="14sp"
             android:fontFamily="sans-serif"
-            android:textColor="#ADADAD"
-        />
+            android:textColor="#F4F4F4"
+            />
+
 
     </LinearLayout>
 
@@ -81,7 +74,27 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:textColor="#C1C1C1"
+            android:text="This call is end to end encrypted"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
     >
 
         <LinearLayout
@@ -93,13 +106,13 @@
             android:layout_marginBottom="60dp"
             android:layout_marginEnd="140dp"
         >
+
             <com.incomingcall.AnimateImage
                 android:id="@+id/ivDeclineCall"
                 android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_decline_call"
-            />
+                android:src="@drawable/ic_decline_call" />
             <TextView
                 android:id="@+id/tvDecline"
                 android:layout_width="match_parent"
@@ -107,8 +120,8 @@
                 android:layout_marginTop="10dp"
                 android:textSize="14sp"
                 android:fontFamily="sans-serif"
-                android:textColor="#ADADAD"
-                android:text="@string/decline"
+                android:textColor="#000066"
+                android:text="Reject"
                 android:gravity="center"
             />
         </LinearLayout>
@@ -135,8 +148,8 @@
                 android:layout_marginTop="10dp"
                 android:textSize="14sp"
                 android:fontFamily="sans-serif"
-                android:textColor="#ADADAD"
-                android:text="@string/accept"
+                android:textColor="#000066"
+                android:text="Accept"
                 android:gravity="center"
             />
         </LinearLayout>
