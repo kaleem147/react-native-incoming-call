@@ -1,6 +1,5 @@
 package com.incomingcall;
 
-import android.app.KeyguardManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,7 +18,6 @@ import android.app.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningAppProcessInfo;
-import android.widget.Toast;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
@@ -120,10 +118,6 @@ public class UnlockScreenActivity extends AppCompatActivity implements UnlockScr
                 dismissDialing();
             }
         });
-
-        WritableMap params = Arguments.createMap();
-        params.putBoolean("accept", true);
-        sendEvent("onIncoming",params);
 
     }
 
