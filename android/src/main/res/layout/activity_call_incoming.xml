@@ -7,63 +7,89 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="500dp"
         android:layout_centerHorizontal="true"
+        android:background="#000066"
         android:gravity="center_horizontal"
-        android:background="#ff9e15"
-        android:paddingVertical="30dp"
-        >
-        <TextView
-            android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:paddingVertical="30dp">
+
+        <ImageView
+            android:layout_width="147dp"
+            android:layout_height="37dp"
+            android:src="@drawable/brand_logo" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="22sp"
-            android:fontFamily="sans-serif"
-            android:textColor="#FFFFFF"
-            android:text="oladoc video consultation"
-            />
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/video_small_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:baselineAligned="false"
+                android:fontFamily="sans-serif"
+                android:text="Incoming video consultation call"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
-            >
+            android:layout_height="196dp">
 
             <ImageView
                 android:id="@+id/ivAvatar"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:scaleType="fitXY"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/ic_call_patient"
-                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                />
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_call_patient" />
 
         </RelativeLayout>
 
         <TextView
-            android:paddingHorizontal="40dp"
-            android:ellipsize="end"
-            android:maxLines="1"
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="22sp"
+            android:ellipsize="end"
             android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:paddingHorizontal="40dp"
             android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/tvInfoHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif"
+            android:textColor="#f2f2f2"
+            android:textSize="11sp"
+            android:text="Appointment Detail"
             />
-
         <TextView
             android:id="@+id/tvInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:textSize="14sp"
+            android:layout_marginTop="5dp"
             android:fontFamily="sans-serif"
-            android:textColor="#F4F4F4"
-            />
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
 
 
     </LinearLayout>
@@ -110,7 +136,7 @@
             <com.incomingcall.AnimateImage
                 android:id="@+id/ivDeclineCall"
                 android:layout_width="60dp"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_decline_call" />
             <TextView
@@ -121,7 +147,7 @@
                 android:textSize="14sp"
                 android:fontFamily="sans-serif"
                 android:textColor="#000066"
-                android:text="Reject"
+                android:text="Decline"
                 android:gravity="center"
             />
         </LinearLayout>
